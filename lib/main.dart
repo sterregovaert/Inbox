@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // return MaterialApp.router(routerConfig: _router,)
-    
+
     return MaterialApp(
       title: 'Inbox example',
       theme: ThemeData(
@@ -118,6 +118,11 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             color: Theme.of(context).colorScheme.onPrimary,
           ),
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {},
+            color: Theme.of(context).colorScheme.onPrimary,
+          )
         ],
       ),
       body: Column(
