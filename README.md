@@ -1,4 +1,4 @@
-# flutter_application_2
+# Inbox example app
 
 A new Flutter project.
 
