@@ -20,16 +20,6 @@ class DetailsScreen extends StatelessWidget {
   }
 }
 
-//     return Scaffold(
-//       appBar: AppBar(title: const Text('Details Screen')),
-//       body: Center(
-//         child: ElevatedButton(
-//           onPressed: () => context.go('/'),
-//           child: const Text('Go back to the Home screen'),
-//         ),
-//       ),
-//     );
-
 class InboxPage extends StatefulWidget {
   const InboxPage({super.key, required this.title});
 
