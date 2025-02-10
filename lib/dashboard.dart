@@ -9,11 +9,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home Screen')),
+      appBar: AppBar(title: const Text('Dashboard')),
       body: Center(
         child: ElevatedButton(
           onPressed: () => context.go('/details'),
-          child: const Text('Go to the Details screen'),
+          child: const Text('Go to the inbox to see your messages!'),
         ),
       ),
     );

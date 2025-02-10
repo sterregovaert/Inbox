@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/inbox.dart';
+import 'package:inbox_example/dashboard.dart';
+import 'package:inbox_example/inbox.dart';
 import 'package:go_router/go_router.dart';
-import './dashboard.dart';
 
 void main() => runApp(const MyApp());
 
@@ -37,4 +37,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class DetailsScreen extends StatelessWidget {
+  const DetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,37 +15,28 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(255, 0, 94, 255)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Inbox'),
+      home: const InboxPage(title: 'Inbox'),
     );
   }
 }
 
-/// The details screen
-class DetailsScreen extends StatelessWidget {
-  /// Constructs a [DetailsScreen]
-  const DetailsScreen({super.key});
+//     return Scaffold(
+//       appBar: AppBar(title: const Text('Details Screen')),
+//       body: Center(
+//         child: ElevatedButton(
+//           onPressed: () => context.go('/'),
+//           child: const Text('Go back to the Home screen'),
+//         ),
+//       ),
+//     );
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Details Screen')),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () => context.go('/'),
-          child: const Text('Go back to the Home screen'),
-        ),
-      ),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class InboxPage extends StatefulWidget {
+  const InboxPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<InboxPage> createState() => _InboxPageState();
 }
 
 class Message {
@@ -64,7 +51,7 @@ class Message {
   });
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _InboxPageState extends State<InboxPage> {
   var messages = <Message>[];
 
   void _createMessage() {
@@ -100,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             IconButton(
               icon: const Icon(Icons.arrow_back),
-              onPressed: () {},
+              onPressed: () => context.go('/'),
               color: Theme.of(context).colorScheme.onPrimary,
             ),
             Text(
